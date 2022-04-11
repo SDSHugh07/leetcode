@@ -3,17 +3,9 @@ class Solution:
 
         k=0
 
-        for i in range (len(nums)):
-            if nums[i] == val:
-                k = i
-                break
-
-        for j in range (k,len(nums)):
-            if nums[j] == val:
-                j+=1
-            else:
+        for j in range (len(nums)):
+            if nums[j] != val:
                 nums[k] = nums[j]
-                j+=1
                 k+=1
 
         return k
